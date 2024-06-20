@@ -2,14 +2,13 @@
   "name": "proyecto_residencia",
   "version": "1.0.0",
   "description": "Proyect for program Systems",
-  "main": "src/app.js",
   "scripts": {
-    "dev": "tsnd --respaw --clear src/app.ts"
-
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MarcoVilera/proyecto_residencia.git"
+    "build:backend": "tsc -p backend",
+    "build:frontend": "vite build --config frontend/vite.config.ts",
+    "build": "npm run build:backend && npm run build:frontend",
+    "start:backend": "ts-node backend/src/index.ts",
+    "start:frontend": "vite --config frontend/vite.config.ts --host",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
   },
   "author": "Armando",
   "license": "ISC",
@@ -23,7 +22,14 @@
     "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "^20.14.6",
     "rimraf": "^5.0.7",
-    "ts-node-dev": "^2.0.0"
+    "ts-node-dev": "^2.0.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^8.2.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.3.1"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -31,6 +37,8 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "sequelize": "^6.37.3",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }

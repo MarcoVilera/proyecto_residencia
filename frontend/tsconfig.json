@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "outDir": "../dist/frontend",
+    "rootDir": "./src",
+  },
+  "include": ["./src/**/*"]
+}
