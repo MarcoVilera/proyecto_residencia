@@ -1,9 +1,9 @@
 import { AccountRole, } from "./RoleTypes/AccountRole";
 import { AreaRole } from "./RoleTypes/AreaRole";
 import { UserRole } from "./RoleTypes/UserRole";
-import { QuotasRole } from "./RoleTypes/quotasRole";
+import { QuotasRole } from "./RoleTypes/QuotasRole";
 
-class Role{
+export class Role{
 
     private nameRol: string;
     private idRol: number;
@@ -13,7 +13,6 @@ class Role{
     private areaRole: AreaRole;
     private userRoles: UserRole;
     private quotasRole: QuotasRole;
-
     
     //Constructor a utilizar si se va a crear el superUser
     constructor(nameRol: string, idRol: number, allRoles: boolean) {
@@ -26,7 +25,7 @@ class Role{
         this.areaRole = new AreaRole(true,true);
         this.userRoles = new UserRole(true,true,true);
         this.quotasRole = new QuotasRole(true,true,true);
-    }  
+    }   
     
 
     // Getters for basic properties
