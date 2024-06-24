@@ -5,7 +5,10 @@ const app = express();
 const port = 3001;
 sequelize.sync();
 
-app.get('/', async (_req, res) => {
+const ApiRouter = express.Router();
+app.use('/api', ApiRouter)
+
+app.get('/', (_req, res) => {
     res.send({ message: 'Hello from Express!' });
 
 });
