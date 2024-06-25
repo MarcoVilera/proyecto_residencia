@@ -1,5 +1,6 @@
-import { Table, Column, Model, DataType, HasOne, ForeignKey } from 'sequelize-typescript';
+import { Table, Column, Model, DataType, HasOne, ForeignKey, HasMany } from 'sequelize-typescript';
 import Owners from './Owner';
+import Residents from './Resident';
 
 @Table({
   tableName: 'apartments',
@@ -27,6 +28,9 @@ export default class Apartments extends Model {
     allowNull: false
   })
   owner: string;
+
+  @HasMany(() => Residents)
+  Residents: Residents[];
 
   @HasOne(() => Owners)
   Owner: Apartments;

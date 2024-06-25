@@ -2,8 +2,10 @@ import CommonArea_Reserve from "./CommonArea_Reserve";
 import Owners from "./Owner";
 import Role from "./Role";
 
-import { Table, Column, Model, DataType, ForeignKey, BelongsTo, HasOne } from 'sequelize-typescript';
+import { Table, Column, Model, DataType, ForeignKey, BelongsTo, HasOne, HasMany } from 'sequelize-typescript';
 import MaintenanceRequests from "./MaintenanceRequest";
+import Notifications from "./Notification";
+import Residents from "./Resident";
 
 @Table({
     tableName: 'users',
@@ -16,7 +18,7 @@ export default class Users extends Model {
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
-        
+
     })
     user_id: number;
 
@@ -62,12 +64,17 @@ export default class Users extends Model {
     @HasOne(() => Owners, { onDelete: 'NO ACTION', sourceKey: 'name' })
     owner: Owners;
 
+    @HasOne(() => Residents, { onDelete: 'NO ACTION', sourceKey: 'name' })
+    resident: Residents;
+
     @HasOne(() => CommonArea_Reserve, { onDelete: 'NO ACTION', sourceKey: 'name' })
     common_area_reserve: CommonArea_Reserve;
 
     @HasOne(() => MaintenanceRequests, { onDelete: 'NO ACTION', sourceKey: 'name' })
     maintenance_request: MaintenanceRequests;
 
-}    
+    @HasMany(() => Notifications, { onDelete: 'NO ACTION', sourceKey: 'name' })
+    notification: Notifications;
 
-    
+}
+
