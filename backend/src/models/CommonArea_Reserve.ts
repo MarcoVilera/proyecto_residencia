@@ -1,6 +1,7 @@
 import { Table, Column, Model, DataType, ForeignKey, HasOne, BelongsTo } from 'sequelize-typescript';
 import CommonAreas from './CommonArea';
 import Users from './User';
+import Payments from './Payment';
 
 @Table({
     tableName: 'common_area_reserves',
@@ -54,4 +55,12 @@ export default class CommonArea_Reserve extends Model {
     common_area: CommonAreas;
 
     //TODO: Add the relationship with the Payment model
+    @ForeignKey(() => Payments)
+    @Column({
+        type: DataType.INTEGER,
+        allowNull: false
+    })
+    payment_area: number;
+
+    
 }

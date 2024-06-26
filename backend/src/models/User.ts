@@ -6,6 +6,7 @@ import { Table, Column, Model, DataType, ForeignKey, BelongsTo, HasOne, HasMany 
 import MaintenanceRequests from "./MaintenanceRequest";
 import Notifications from "./Notification";
 import Residents from "./Resident";
+import Payments from "./Payment";
 
 @Table({
     tableName: 'users',
@@ -74,7 +75,10 @@ export default class Users extends Model {
     maintenance_request: MaintenanceRequests;
 
     @HasMany(() => Notifications, { onDelete: 'NO ACTION', sourceKey: 'name' })
-    notification: Notifications;
+    notification: Notifications[];
+
+    @HasMany(() => Payments, { onDelete: 'NO ACTION', sourceKey: 'name' })
+    payment: Payments[];
 
 }
 
