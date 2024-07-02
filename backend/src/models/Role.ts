@@ -1,5 +1,6 @@
 import { Table, Column, Model, DataType, HasMany } from 'sequelize-typescript';
 import Users from './User';
+
 @Table({
     tableName: 'roles',
     timestamps: false
@@ -98,3 +99,4 @@ export default class Role extends Model {
     @HasMany(() => Users, { onDelete: 'NO ACTION', sourceKey: 'rol_name' })
     users: Users[];
 }
+
