@@ -1,0 +1,64 @@
+.navbar-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #5052DB;
+    color: #fff;
+    padding: 20px;
+    transition: all 0.5s ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .navbar-lateral .logo {
+    margin-bottom: 20px;
+  }
+  
+  .navbar-lateral .logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .navbar-lateral .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-lateral .menu li {
+    margin-bottom: 10px;
+  }
+  
+  .navbar-lateral .menu a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar-lateral .menu a:hover {
+    color: #6a118d;
+  }
+  
+  .navbar-lateral.show {
+    transform: translateX(0);
+  }
+  
+  .navbar-lateral.hide {
+    transform: translateX(-250px);
+  }
+
+  .btn-logout {
+    background-color: firebrick;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+  }
+  
+  .btn-logout:hover {
+    background-color: rgb(85, 6, 6);
+  }
