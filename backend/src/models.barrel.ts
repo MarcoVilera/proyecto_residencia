@@ -12,4 +12,3 @@ export * from "./models/Resident";
 export * from "./models/Role";
 export * from "./models/ServicePayment";
 export * from "./models/User";
-

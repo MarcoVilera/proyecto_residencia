@@ -1,6 +1,0 @@
-Predefinir los tipos de roles a crear y verificar los permisos solo por el nombre del usuario
-
-Pasar el rol completo y verificar los permisos con el rol completo
-
-
-Queda pendiente la clase OWNER
