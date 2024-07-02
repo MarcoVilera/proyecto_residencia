@@ -25,7 +25,7 @@ export default class Apartments extends Model {
   @ForeignKey(() => Owners)
   @Column({
     type: DataType.STRING,
-    allowNull: false
+    allowNull: true
   })
   owner: string;
 
