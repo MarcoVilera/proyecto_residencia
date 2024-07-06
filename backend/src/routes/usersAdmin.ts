@@ -2,9 +2,10 @@ import express from 'express';
 import Users from '../models/User';
 import Residents from '../models/Resident';
 import Owners from '../models/Owner';
+import { Optional } from 'sequelize';
 
 const router = express.Router();
-export default router.get('/users', async(_req,res)=> {
+export default router.get('/', async(_req,res)=> {
     
     try {
         
@@ -17,9 +18,21 @@ export default router.get('/users', async(_req,res)=> {
     }
 })
 
-router.post("/users/new", async (req,res) => {
+router.post("/new", async (req,res) => {
     
     try {
+        
+        const checkUserByEmail = await Users.findOne({ where: { email: req.body.email } });
+        const checkUserByCI = await Users.findOne({ where: { ci: req.body.ci } });
+        
+        if (checkUserByCI) {
+        
+            return res.status(400).send({ message: "Ya hay un usuario registrado con la cedula introducida" });
+        
+        }else if (checkUserByEmail) {
+            
+            return res.status(400).send({ message: "Ya hay un usuario registrado con el correo intoducido" });
+        }
         
         const user = await Users.create(req.body);
         
@@ -37,6 +50,65 @@ router.post("/users/new", async (req,res) => {
             res.send(owner);
         }*/
         
+
+    } catch (error) {
+        
+        console.log(error);
+        
+        res.status(400).send(error);
+    }
+
+});
+
+router.patch("/users/modify/:userId", async (req,res) => {
+    
+    try {
+
+        const userId = req.params.userId
+        const userToUpdate = await Users.findByPk(userId);
+
+        const updateData = req.body;
+
+        //DEFINIR SI HAY OTRO TIPO DE DATO A CAMBIAR EN LOS USUARIOS
+
+        if (userToUpdate && updateData.email) {
+            userToUpdate.email = updateData.email;
+            
+            await userToUpdate.save();
+            res.status(201).send(userToUpdate);
+        }
+
+
+    } catch (error) {
+        
+        console.log(error);
+        
+        res.status(400).send(error);
+    }
+
+});
+
+router.delete("/users/delete/:userId", async (req,res) => {
+    
+    try {
+
+        const userId = req.params.userId
+        const userDelete = await Users.findByPk(userId);
+        console.log(userId);
+        console.log(typeof userId);
+        
+        
+        
+        if (userDelete != null) {
+            await Users.destroy({ where: { user_id : userId } });
+
+        }else{
+
+            return res.send(404).send({message: 'ID is not asociate a any user'})    
+        }
+
+        res.send(200).send(userDelete)
+
 
     } catch (error) {
         

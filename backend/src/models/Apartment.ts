@@ -12,7 +12,6 @@ export default class Apartments extends Model {
     type: DataType.INTEGER,
     allowNull: false,
     primaryKey: true,
-    autoIncrement: true
   })
   apartment_id: number;
 

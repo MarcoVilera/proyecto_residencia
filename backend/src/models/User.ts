@@ -62,22 +62,22 @@ export default class Users extends Model {
     @BelongsTo(() => Role)
     role: Role;
 
-    @HasOne(() => Owners, { onDelete: 'NO ACTION', sourceKey: 'name' })
+    @HasOne(() => Owners, { onDelete: 'NO ACTION', sourceKey: 'ci' })
     owner: Owners;
 
-    @HasOne(() => Residents, { onDelete: 'NO ACTION', sourceKey: 'name' })
+    @HasOne(() => Residents, { onDelete: 'NO ACTION', sourceKey: 'ci' })
     resident: Residents;
 
-    @HasOne(() => CommonArea_Reserve, { onDelete: 'NO ACTION', sourceKey: 'name' })
+    @HasOne(() => CommonArea_Reserve, { onDelete: 'NO ACTION', sourceKey: 'ci' })
     common_area_reserve: CommonArea_Reserve;
 
-    @HasOne(() => MaintenanceRequests, { onDelete: 'NO ACTION', sourceKey: 'name' })
+    @HasOne(() => MaintenanceRequests, { onDelete: 'NO ACTION', sourceKey: 'ci' })
     maintenance_request: MaintenanceRequests;
 
-    @HasMany(() => Notifications, { onDelete: 'NO ACTION', sourceKey: 'name' })
+    @HasMany(() => Notifications, { onDelete: 'NO ACTION', sourceKey: 'ci' })
     notification: Notifications[];
 
-    @HasMany(() => Payments, { onDelete: 'NO ACTION', sourceKey: 'name' })
+    @HasMany(() => Payments, { onDelete: 'NO ACTION', sourceKey: 'ci' })
     payment: Payments[];
 
 }
