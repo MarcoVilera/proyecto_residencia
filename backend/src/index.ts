@@ -25,8 +25,8 @@ ApiRouter.use('/', router)
 //Admin endpoints
 app.use('/admin', userRouter, apartmentRouter);
 
-userRouter.use("/",routerUsersAdmin);
-apartmentRouter.use("/",routerApartmensAdmin);
+userRouter.use("/users",routerUsersAdmin);
+apartmentRouter.use("/apartments",routerApartmensAdmin);
 
 
 app.listen(port, () => {

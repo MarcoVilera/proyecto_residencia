@@ -2,7 +2,7 @@ import express from 'express';
 import Apartments from '../models/Apartment';
 
 const router = express.Router();
-export default router.get('/apartments', async(_req,res)=> {
+export default router.get('/', async(_req,res)=> {
     
     try {
         
@@ -15,7 +15,7 @@ export default router.get('/apartments', async(_req,res)=> {
     }
 })
 
-router.post("/apartments/new", async (req,res) => {
+router.post("/new", async (req,res) => {
     
     try {
         
