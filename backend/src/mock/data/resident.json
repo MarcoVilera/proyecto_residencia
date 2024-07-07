@@ -1,0 +1,42 @@
+[
+    {
+        "user": "V-11234567",
+        "apartment_n": 1
+    },
+    {
+        "user": "V-12234568",
+        "apartment_n": 1
+    },
+    {
+        "user": "V-13234569",
+        "apartment_n": 2
+    },
+    {
+        "user": "V-14234570",
+        "apartment_n": 3
+    },
+    {
+        "user": "V-15234571",
+        "apartment_n": 4
+    },
+    {
+        "user": "V-16234572",
+        "apartment_n": 5
+    },
+    {
+        "user": "V-17234573",
+        "apartment_n": 5
+    },
+    {
+        "user": "V-18234574",
+        "apartment_n": 5
+    },
+    {
+        "user": "V-19234575",
+        "apartment_n": 6
+    },
+    {
+        "user": "V-20234576",
+        "apartment_n": 7
+    }
+]

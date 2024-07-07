@@ -1,0 +1,77 @@
+[
+    {
+        "apartment_id": 1,
+        "state": "ocupado",
+        "owner": "V-123456"
+    },
+    {
+        "apartment_id": 2,
+        "state": "ocupado",
+        "owner": "V-2345678"
+    },
+    {
+        "apartment_id": 3,
+        "state": "ocupado",
+        "owner": "V-3456789"
+    },
+    {
+        "apartment_id": 4,
+        "state": "ocupado",
+        "owner": "V-4567890"
+    },
+    {
+        "apartment_id": 5,
+        "state": "ocupado",
+        "owner": "V-5678901"
+    },
+    {
+        "apartment_id": 6,
+        "state": "ocupado",
+        "owner": "V-6789012"
+    },
+    {
+        "apartment_id": 7,
+        "state": "ocupado",
+        "owner": "V-7890123"
+    },
+    {
+        "apartment_id": 8,
+        "state": "ocupado",
+        "owner": "V-8901234"
+    },
+    {
+        "apartment_id": 9,
+        "state": "ocupado",
+        "owner": "V-9012345"
+    },
+    {
+        "apartment_id": 10,
+        "state": "ocupado",
+        "owner": "V-1023456"
+    },
+    {
+        "apartment_id": 11,
+        "state": "desocupado",
+        "owner": null
+    },
+    {
+        "apartment_id": 12,
+        "state": "desocupado",
+        "owner": null
+    },
+    {
+        "apartment_id": 13,
+        "state": "desocupado",
+        "owner": null
+    },
+    {
+        "apartment_id": 14,
+        "state": "desocupado",
+        "owner": null
+    },
+    {
+        "apartment_id": 15,
+        "state": "desocupado",
+        "owner": null
+    }
+]

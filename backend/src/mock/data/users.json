@@ -1,0 +1,142 @@
+[
+    {
+        "name": "Ana Torres",
+        "ci": "V-123456",
+        "email": "ana.torres@example.com",
+        "password": "password1",
+        "user_role": "admin"
+    },
+    {
+        "name": "Carlos Gómez",
+        "ci": "V-2345678",
+        "email": "carlos.gomez@example.com",
+        "password": "password2",
+        "user_role": "resident"
+    },
+    {
+        "name": "Luisa Pérez",
+        "ci": "V-3456789",
+        "email": "luisa.perez@example.com",
+        "password": "password3",
+        "user_role": "owner"
+    },
+    {
+        "name": "Miguel Ángel Díaz",
+        "ci": "V-4567890",
+        "email": "miguel.diaz@example.com",
+        "password": "password4",
+        "user_role": "admin"
+    },
+    {
+        "name": "Sofía Castillo",
+        "ci": "V-5678901",
+        "email": "sofia.castillo@example.com",
+        "password": "password5",
+        "user_role": "resident"
+    },
+    {
+        "name": "Jorge Navarro",
+        "ci": "V-6789012",
+        "email": "jorge.navarro@example.com",
+        "password": "password6",
+        "user_role": "owner"
+    },
+    {
+        "name": "Daniela Molina",
+        "ci": "V-7890123",
+        "email": "daniela.molina@example.com",
+        "password": "password7",
+        "user_role": "admin"
+    },
+    {
+        "name": "Roberto Carlos",
+        "ci": "V-8901234",
+        "email": "roberto.carlos@example.com",
+        "password": "password8",
+        "user_role": "resident"
+    },
+    {
+        "name": "Patricia Salas",
+        "ci": "V-9012345",
+        "email": "patricia.salas@example.com",
+        "password": "password9",
+        "user_role": "owner"
+    },
+    {
+        "name": "Eduardo Vargas",
+        "ci": "V-1023456",
+        "email": "eduardo.vargas@example.com",
+        "password": "password10",
+        "user_role": "admin"
+    },
+    {
+        "name": "Gabriela Ramírez",
+        "ci": "V-11234567",
+        "email": "gabriela.ramirez@example.com",
+        "password": "password11",
+        "user_role": "resident"
+    },
+    {
+        "name": "Héctor Juárez",
+        "ci": "V-12234568",
+        "email": "hector.juarez@example.com",
+        "password": "password12",
+        "user_role": "owner"
+    },
+    {
+        "name": "Isabel Contreras",
+        "ci": "V-13234569",
+        "email": "isabel.contreras@example.com",
+        "password": "password13",
+        "user_role": "admin"
+    },
+    {
+        "name": "Juan Martínez",
+        "ci": "V-14234570",
+        "email": "juan.martinez@example.com",
+        "password": "password14",
+        "user_role": "resident"
+    },
+    {
+        "name": "Laura Hernández",
+        "ci": "V-15234571",
+        "email": "laura.hernandez@example.com",
+        "password": "password15",
+        "user_role": "owner"
+    },
+    {
+        "name": "Manuel Espinoza",
+        "ci": "V-16234572",
+        "email": "manuel.espinoza@example.com",
+        "password": "password16",
+        "user_role": "admin"
+    },
+    {
+        "name": "Natalia Jiménez",
+        "ci": "V-17234573",
+        "email": "natalia.jimenez@example.com",
+        "password": "password17",
+        "user_role": "resident"
+    },
+    {
+        "name": "Óscar López",
+        "ci": "V-18234574",
+        "email": "oscar.lopez@example.com",
+        "password": "password18",
+        "user_role": "owner"
+    },
+    {
+        "name": "Paula Gutiérrez",
+        "ci": "V-19234575",
+        "email": "paula.gutierrez@example.com",
+        "password": "password19",
+        "user_role": "admin"
+    },
+    {
+        "name": "Ricardo Álvarez",
+        "ci": "V-20234576",
+        "email": "ricardo.alvarez@example.com",
+        "password": "password20",
+        "user_role": "resident"
+    }
+]
