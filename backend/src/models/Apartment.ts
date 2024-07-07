@@ -1,4 +1,4 @@
-import { Table, Column, Model, DataType, HasOne, ForeignKey, HasMany } from 'sequelize-typescript';
+import { Table, Column, Model, DataType, HasOne, ForeignKey, HasMany, BelongsTo } from 'sequelize-typescript';
 import Owners from './Owner';
 import Residents from './Resident';
 
@@ -24,13 +24,17 @@ export default class Apartments extends Model {
   @ForeignKey(() => Owners)
   @Column({
     type: DataType.STRING,
-    allowNull: true
+    allowNull: true,
+    defaultValue: null
   })
-  owner: string;
+  owner: string | null;
 
   @HasMany(() => Residents)
   Residents: Residents[];
 
   @HasOne(() => Owners)
   Owner: Apartments;
+
+  @BelongsTo(() => Owners)
+  aptOwner: Owners;
 }
