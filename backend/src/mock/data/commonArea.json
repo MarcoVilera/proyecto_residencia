@@ -1,0 +1,37 @@
+[
+    {
+        "area_name": "Lobby",
+        "OpenTime": "08:00",
+        "CloseTime": "22:00",
+        "available": true,
+        "cost_area": 250
+    },
+    {
+        "area_name": "Salon de fiestas",
+        "OpenTime": "12:00",
+        "CloseTime": "22:00",
+        "available": true,
+        "cost_area": 350
+    },
+    {
+        "area_name": "Parque",
+        "OpenTime": "06:00",
+        "CloseTime": "19:00",
+        "available": true,
+        "cost_area": 50
+    },
+    {
+        "area_name": "Caney",
+        "OpenTime": "09:00",
+        "CloseTime": "01:00",
+        "available": true,
+        "cost_area": 150
+    },
+    {
+        "area_name": "Piscina",
+        "OpenTime": "08:00",
+        "CloseTime": "20:00",
+        "available": true,
+        "cost_area": 200
+    }
+]
