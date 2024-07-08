@@ -6,4 +6,5 @@ export const sequelize = new Sequelize({
     dialect: 'sqlite',
     host: './residencia_db.sqlite',
     models: [__dirname + '/models'],
+    logging: false // Para que no muestre las consultas SQL por consola
 })
