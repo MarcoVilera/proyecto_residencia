@@ -2,7 +2,6 @@ import express from 'express';
 import Users from '../models/User';
 import Residents from '../models/Resident';
 import Owners from '../models/Owner';
-import { Optional } from 'sequelize';
 
 const router = express.Router();
 export default router.get('/', async(_req,res)=> {
@@ -35,21 +34,38 @@ router.post("/new", async (req,res) => {
         }
         
         const user = await Users.create(req.body);
-        
-        user.save();
-        res.status(201).send(user);
+        //const userData: JSON = JSON.parse(req.body)
+        //console.log(userData);
 
-        /*if (req.body.user_role == "resident") {
+        
+        // DEPENDIENDO DEL TIPO DE ROLE ENVIARA UN TIPO DE USUARIO DISTINTO COMO RESPUESTA
+        if (req.body.user_role == "resident") {
+
+            const residentData = {
+
+                user: user.ci,
+                apartment_n: req.body.apartment_n
+            }
+
+            user.save();
+            const fin = await Users.findOne({ where: { ci: req.body.ci } });
+            console.log("USUARIO CREADO");
             
-            const resident = await Residents.create(req.body);
-            res.send(resident);
+            console.log(fin);
+            
+            const resident = await Residents.create(residentData);
+            return res.send(resident);
         
         }else if (req.body.user_role == "owner") {
             
+            user.save();
             const owner = await Owners.create(req.body);
-            res.send(owner);
-        }*/
-        
+            return res.send(owner);
+        }
+
+        user.save();
+        return res.status(201).send(user);
+
 
     } catch (error) {
         

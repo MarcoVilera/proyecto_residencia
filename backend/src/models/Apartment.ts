@@ -10,8 +10,8 @@ export default class Apartments extends Model {
 
   @Column({
     type: DataType.INTEGER,
-    allowNull: false,
-    primaryKey: true,
+    allowNull: true,
+    primaryKey: true
   })
   apartment_id: number;
 
