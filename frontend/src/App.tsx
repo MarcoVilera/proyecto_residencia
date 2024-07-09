@@ -9,8 +9,7 @@ const App: React.FC = () => {
     fetchData();
     return (
         <div>
-            <h1>Hello, React with TypeScript and Vite!</h1>
-        </div>
+      </div>
     );
 };
 

@@ -31,7 +31,7 @@ export default class Payments extends Model {
 
     @ForeignKey(() => Users)
     @Column({
-        type: DataType.INTEGER,
+        type: DataType.STRING,
         allowNull: false
     })
     user: string;

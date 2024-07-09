@@ -54,7 +54,6 @@ export default class CommonArea_Reserve extends Model {
     @BelongsTo(() => CommonAreas, { foreignKey: 'area', targetKey: 'area_name' })
     common_area: CommonAreas;
 
-    //TODO: Add the relationship with the Payment model
     @ForeignKey(() => Payments)
     @Column({
         type: DataType.INTEGER,

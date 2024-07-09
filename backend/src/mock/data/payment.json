@@ -1,0 +1,52 @@
+[
+    {
+        "payment_date": "2024-07-01",
+        "payment_amount": 900,
+        "user": "V-3456789"
+    },
+    {
+        "payment_date": "2024-07-02",
+        "payment_amount": 700,
+        "user": "V-2345678"
+    },
+    {
+        "payment_date": "2024-07-02",
+        "payment_amount": 1150,
+        "user": "V-3456789"
+    },
+    {
+        "payment_date": "2024-07-05",
+        "payment_amount": 1500,
+        "user": "V-4567890"
+    },
+    {
+        "payment_date": "2024-07-05",
+        "payment_amount": 1000,
+        "user": "V-5678901"
+    },
+    {
+        "payment_date": "2024-07-06",
+        "payment_amount": 2000,
+        "user": "V-6789012"
+    },
+    {
+        "payment_date": "2024-07-07",
+        "payment_amount": 3000,
+        "user": "V-7890123"
+    },
+    {
+        "payment_date": "2024-07-08",
+        "payment_amount": 100,
+        "user": "V-8901234"
+    },
+    {
+        "payment_date": "2024-07-09",
+        "payment_amount": 1500,
+        "user": "V-9012345"
+    },
+    {
+        "payment_date": "2024-07-10",
+        "payment_amount": 1200,
+        "user": "V-2345678"
+    }
+]

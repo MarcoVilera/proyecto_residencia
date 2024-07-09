@@ -1,0 +1,18 @@
+[
+    {
+        "user": "V-3456789",
+        "area": "Lobby",
+        "date_reserve": "2024-07-01",
+        "pay_area": 1,
+        "payment_area": 1,
+        "duration_reserve": "1 Hora"
+    },
+    {
+        "user": "V-2345678",
+        "area": "Piscina",
+        "date_reserve": "2024-07-02",
+        "pay_area": 1,
+        "payment_area": 3,
+        "duration_reserve": "3 Hora"
+    }
+]

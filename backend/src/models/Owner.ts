@@ -1,24 +1,3 @@
-// import { Role } from "../Role";
-// import { User } from "../User";
-
-// class Owner extends User {
-
-//     private ownerId: number;
-//     private apartment: Apartment;
-
-//     //Nombre de usuario por definir
-//     private user: string;
-
-//     constructor(name: string, lastname: string, id: string, email: string, role: Role, ownerId: number, apartment: Apartment) {
-
-//         super(name, lastname, id, email, role);
-
-//         this.ownerId = ownerId;
-//         this.apartment = apartment;
-
-//     }
-// }
-
 import { Table, Column, Model, DataType, ForeignKey, HasOne, HasMany } from 'sequelize-typescript';
 import Users from './User';
 import Apartments from './Apartment';
@@ -48,14 +27,15 @@ export default class Owners extends Model {
     @ForeignKey(() => Apartments)
     @Column({
         type: DataType.INTEGER,
-        allowNull: false
+        allowNull: true,
+        defaultValue: null
     })
-    apartment: number;
+    apartment: number | null;
 
 
     @HasMany(() => Quotas, { onDelete: 'NO ACTION', sourceKey: 'user' })
     Quotas: Quotas[];
 
     @HasOne(() => Apartments, { onDelete: 'NO ACTION', sourceKey: 'user' })
-    Apartment: Owners;
+    Apartment: Apartments[];
 }
