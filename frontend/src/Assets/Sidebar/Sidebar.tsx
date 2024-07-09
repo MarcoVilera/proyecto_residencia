@@ -8,7 +8,7 @@ const NavbarLateral = () => {
         <img src="logo.png" alt="Logo" />
       </div>
       <ul className="menu">
-        <li><a href="#">Vista 1</a></li>
+        <li><a href="#">Crear Usuario</a></li>
         <li><a href="#">Vista 2</a></li>
         <li><a href="#">Vista 3</a></li>
         <li><a href="#">Vista 4</a></li>
