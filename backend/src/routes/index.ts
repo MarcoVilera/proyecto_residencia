@@ -8,4 +8,4 @@ const router = express.Router();
 
 export default router.get('/test', (_req, res) => {
     res.send({ message: 'Hello from Express!' });
-});
+}); 

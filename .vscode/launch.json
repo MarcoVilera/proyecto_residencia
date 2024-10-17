@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "ResidenceApplication",
+            "request": "launch",
+            "mainClass": "com.residence.residence.ResidenceApplication",
+            "projectName": "residence"
+        },
+        {
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
