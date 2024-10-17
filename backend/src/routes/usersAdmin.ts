@@ -49,6 +49,8 @@ router.post("/new", async (req,res) => {
 
             user.save();
             const fin = await Users.findOne({ where: { ci: req.body.ci } });
+            console.log("TIPO DE DATO DE LA ASOCIACION  " + typeof user.ci);
+            
             console.log("USUARIO CREADO");
             
             console.log(fin);
@@ -58,8 +60,18 @@ router.post("/new", async (req,res) => {
         
         }else if (req.body.user_role == "owner") {
             
+            const residentData = {
+
+                user: user.ci,
+                apartment_n: req.body.apartment_n
+            }
+
             user.save();
-            const owner = await Owners.create(req.body);
+            const fin = await Users.findOne({ where: { ci: req.body.ci } });
+            console.log("TIPO DE DATO DE LA ASOCIACION  " + typeof user.ci);
+            console.log(fin);
+            
+            const owner = await Owners.create(residentData);
             return res.send(owner);
         }
 
@@ -76,7 +88,7 @@ router.post("/new", async (req,res) => {
 
 });
 
-router.patch("/users/modify/:userId", async (req,res) => {
+router.patch("/modify/:userId", async (req,res) => {
     
     try {
 
@@ -104,7 +116,7 @@ router.patch("/users/modify/:userId", async (req,res) => {
 
 });
 
-router.delete("/users/delete/:userId", async (req,res) => {
+router.delete("/delete/:userId", async (req,res) => {
     
     try {
 
