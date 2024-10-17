@@ -1,3 +1,6 @@
 [submodule "residence-project-springs"]
 	path = residence-project-springs
 	url = https://github.com/armandoLopz/residence-project-spring.git
+[submodule "residence-project-spring"]
+	path = residence-project-spring
+	url = https://github.com/armandoLopz/residence-project-spring.git
