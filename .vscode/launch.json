@@ -8,6 +8,12 @@
             "type": "java",
             "name": "ResidenceApplication",
             "request": "launch",
+            "mainClass": "com.residence.residence.ResidenceApplication"
+        },
+        {
+            "type": "java",
+            "name": "ResidenceApplication",
+            "request": "launch",
             "mainClass": "com.residence.residence.ResidenceApplication",
             "projectName": "residence"
         },
